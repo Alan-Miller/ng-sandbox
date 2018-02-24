@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="officeApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office App</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body ng-controller="officeController">
+    <section class="main-section">
+
+      <div class="content-wrapper">
+
+        <div class="switch-office-btn" ng-click="switchOffice()">switch office</div>
+
+        <div class="list">
+          <input placeholder="Filter items" ng-model="officeList" />
+          <h1>{{ show.title }}</h1>
+          <ul>
+            <li ng-repeat="employee in show.employees | filter: {name: officeList, job: officeList}" 
+                ng-class="
+                  {'lovebirds': employee.lovebirds, 
+                   'nerds': employee.job.indexOf('IT ') !== -1}" >
+              <span class="scope-info">{{ employee.name }}'s</span>
+              <span style="font-style:italic">job is</span> 
+              <span class="scope-info" ng-class="{'big-money': employee.salary > 55000}">
+                {{ employee.job }}
+              </span>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+    </section>
+
+
+    
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js">
+    </script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./officeController.js"></script>
+  </body>
+</html>

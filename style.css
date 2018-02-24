@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: sans-serif;
+  outline: none;
+  border: none;
+}
+
+.main-section {
+  background-color: lightblue;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-wrapper {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+}
+
+.switch-office-btn {
+  height: 40px;
+  width: 120px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 1px 0px rgba(10, 10, 10, .5);
+}
+
+.list {
+  background-color: indianred;
+  padding: 30px 0;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 7px 7px 1px 0px rgba(10, 10, 10, .5);
+}
+
+h1 { margin-top: 20px; color: white; }
+input { 
+  padding: 7px; 
+  width: 200px; 
+  box-shadow: inset 3px 3px 0px 0px rgba(10, 10, 10, .7);
+}
+li { margin: 10px 20px 0 20px; }
+
+/* .scope-info { color: white; } */
+.lovebirds, .nerds { font-size: 1.7rem; }
+.big-money { color: white; }
